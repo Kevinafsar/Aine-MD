@@ -53,7 +53,7 @@ Hai, %ucapan %name! 👋
   body: ' • %cmd %islimit %isPremium',
   footer: '\n',
   after: `*Made by ♡*
-*%npmname* | %version
+*%vinbot* | %version
 ${'```%npmdesc```'}
 `,
 }
@@ -157,7 +157,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendButton(m.chat, text.trim(), 'Made with ♡ by Aine', null, [['Donasi', '.donasi'],['Owner', '.owner']], m)
+    conn.sendButton(m.chat, text.trim(), 'Made with ♡ by Kevin', null, [['Donasi', '.donasi'],['Owner', '.owner']], m)
     /*conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://aiinne.github.io/', 'Website', '', '', [
       ['Donate', '/donasi'],
       ['Sewa Bot', '/sewa'],
