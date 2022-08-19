@@ -12,7 +12,7 @@ let [number, pesan] = text.split `|`
     var nomor = m.sender
     let spam1 = `*「 PESAN RAHASIA 」*\n\nUNTUK : wa.me/${korban}\nPesannya : ${pesan}\n\n*${global.wm}*`
 
-    conn.sendMessage(korban + '@s.whatsapp.net', spam1, m)
+    await conn.sendMessage(korban + '@s.whatsapp.net', spam1, m)
 
     let logs = `[!] Berhasil mengirim pesan wa ke nomor ${korban}`
     conn.reply(m.chat, logs, m)
